@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Рудольф Салмин](https://up.htmlacademy.ru/javascript/24/user/1764135).
-* Наставник: <a hfref="https://htmlacademy.ru/profile/dima"[Дмитрий Гуляев].</a>
+* Наставник: [Дмитрий Гуляев](https://htmlacademy.ru/profile/dima)
 
 ---
 
