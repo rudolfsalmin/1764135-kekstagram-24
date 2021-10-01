@@ -1,15 +1,16 @@
 const randomNumber = (min,max) => {
-  if (min < max || min >= 0)
-  {return Math.floor(Math.random() * (max - min + 1)) + min;}
-};
-randomNumber(-30,50);
-// взято с https://developer.mozilla.org/
-const commentLength = (strng,maxLength) => {
-  if (strng.length >= maxLength) {
-    return false;
+  if (min <0 && max<0) {
+    return undefined;
   }
-  return true;
+  const low = min>0 ? min: 0;
+  const random = Math.random();
+  const res = low + Math.round(random* (max-low));
+  return res;
 };
+
+randomNumber(-10, -60);
+// взято с https://developer.mozilla.org/
+const commentLength = (strng,maxLength) => strng.length <= maxLength;
 commentLength('string',140);
 
 // взято с https://www.cyberforum.ru/javascript/thread1165903.html
