@@ -1,4 +1,4 @@
-const randomNumber = (min,max) => {
+const getRandomNumber = (min,max) => {
   if (min <0 && max<0) {
     return undefined;
   }
@@ -8,9 +8,9 @@ const randomNumber = (min,max) => {
   return res;
 };
 
-randomNumber(-10, -60);
+getRandomNumber(-10, -60);
 // взято с https://developer.mozilla.org/
-const commentLength = (strng,maxLength) => strng.length <= maxLength;
-commentLength('string',140);
+const getCommentLength = (strng,maxLength) => strng.length <= maxLength;
+getCommentLength('string',140);
 
 // взято с https://www.cyberforum.ru/javascript/thread1165903.html
