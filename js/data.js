@@ -35,14 +35,14 @@ const NAMES = [
   const MIN_AVATAR = 1;
   const MAX_AVATAR = 6;
   const COMMENT_COUNT = 8;
-
+//массив комментариев  (обьект с id,аватаром(MIN_AVATAR,MAX_AVATAR),сообщением(COMMENTS) и именем(NAMES)
   const commentList = Array.from({length: POST_COUNT}, (element,index) => ({
     id: index + 1,
     avatar: 'img/avatar-${getRandomNumber(MIN_AVATAR,MAX_AVATAR)}.svg',
     message: COMMENTS[getRandomNumber(0,COMMENTS.length - 1)],
     name: NAMES[getRandomNumber(0,NAMES.lenth - 1)]
   }));
-
+//Функция для генерации случайного комментария из массив
   function getComments () {
     const arrList = Array.from({length: getRandomNumber(1, COMMENT_COUNT)});
     const uniqCommentList = arrList.map((item) => {
@@ -51,11 +51,11 @@ const NAMES = [
     });
     return uniqCommentList;
   }
-  const arrPhotos = Array.from({length: OBJECT_COUNT}), (item, index) => ({
+  const photos = Array.from({length: OBJECT_COUNT}), (item, index) => ({
     id: index + 1,
     url: 'photos/${index + 1}.jpg',
     description: DESCRIPTIONS[getRandomNumber(0, DESCRIPTIONS.length - 1)],
     likes: getRandomNumber(MIN_LIKES,MAX_LIKES)
     comments: getComments(),
   });
-export {arrPhotos};
+export {photos, MIN_LIKES, MAX_LIKES, getComments};

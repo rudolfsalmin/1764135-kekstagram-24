@@ -12,3 +12,10 @@ getRandomNumber(-10, -60);
 const getCommentLength = (strng,maxLength) => strng.length <= maxLength;
 getCommentLength('string',140);
 // взято с https://www.cyberforum.ru/javascript/thread1165903.html
+
+//функции по нажатию кнопки
+const isEnterKey = (evt) => evt.key === 'Enter';
+
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+export {isEnterKey, isEscapeKey, getRandomNumber, getCommentLength};
