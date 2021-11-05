@@ -1,4 +1,2 @@
-
-import { getRandomNumber } from "./utils.js";
-import { photos } from "./data.js";
-import { userPictureItem } from "./picture.js"
+import {createNewPhotos} from './data.js'
+import {picturesContainer, userPictureItem} from './picture.js'

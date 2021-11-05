@@ -4,7 +4,7 @@ const getRandomNumber = (min,max) => {
   }
   const low = min>0 ? min: 0;
   const random = Math.random();
-  const res = low + Math.round(random* (max-low));
+  const res = low + Math.round(random * (max - low));
   return res;
 };
 getRandomNumber(-10, -60);
