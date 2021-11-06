@@ -1,4 +1,3 @@
-
 import {createNewPhotos} from './data.js';
 import {picturesContainer} from './picture.js';
 import {isEnterKey, isEscapeKey} from './utils.js';
