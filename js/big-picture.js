@@ -73,29 +73,29 @@ function openBigPicture () {
   closePhotoButton.addEventListener('click', closeFullPic);
 }
 
-function allSocialCommentsForClickedPhoto () {
+function getAllSocialCommentsForClickedPhoto () {
   const allSocialComments = document.querySelectorAll('.social__comment');
   return allSocialComments;
 }
 
-function socialCommentCountTextContent (currentsVisibleComments, allSocialComments) {
+function getSocialCommentCountTextContent (currentsVisibleComments, allSocialComments) {
   socialCommentCount.textContent = `${currentsVisibleComments} из ${allSocialComments.length} комментариев`;
 }
 
 function renderShowCommentsList () {
-  if (allSocialCommentsForClickedPhoto().length > 5) {
+  if (getAllSocialCommentsForClickedPhoto().length > 5) {
     commentLoadButton.classList.remove('hidden');
     currentVisibleComments = 5;
-    socialCommentCountTextContent(currentVisibleComments, allSocialCommentsForClickedPhoto());
-    allSocialCommentsForClickedPhoto().forEach( (item, index) => {
+    getSocialCommentCountTextContent(currentVisibleComments, getAllSocialCommentsForClickedPhoto());
+    getAllSocialCommentsForClickedPhoto().forEach( (item, index) => {
       if (index >= 5) {
         item.classList.add('hidden');
       }
     });
-  } else if (allSocialCommentsForClickedPhoto().length <= 5) {
+  } else if (getAllSocialCommentsForClickedPhoto().length <= 5) {
     commentLoadButton.classList.add('hidden');
-    currentVisibleComments = allSocialCommentsForClickedPhoto().length;
-    socialCommentCountTextContent(currentVisibleComments, allSocialCommentsForClickedPhoto());
+    currentVisibleComments = getAllSocialCommentsForClickedPhoto().length;
+    getSocialCommentCountTextContent(currentVisibleComments, getAllSocialCommentsForClickedPhoto());
   }
 }
 
@@ -109,11 +109,11 @@ commentLoadButton.addEventListener('click', () => {
   const refreshListComments = document.querySelectorAll('.social__comment.hidden');
   if (refreshListComments.length === 0) {
     commentLoadButton.classList.add('hidden');
-    currentVisibleComments = allSocialCommentsForClickedPhoto().length;
-    socialCommentCountTextContent(currentVisibleComments, allSocialCommentsForClickedPhoto());
+    currentVisibleComments = getAllSocialCommentsForClickedPhoto().length;
+    getSocialCommentCountTextContent(currentVisibleComments, getAllSocialCommentsForClickedPhoto());
   } else {
     currentVisibleComments += 5;
-    socialCommentCountTextContent(currentVisibleComments, allSocialCommentsForClickedPhoto());
+    getSocialCommentCountTextContent(currentVisibleComments, getAllSocialCommentsForClickedPhoto());
   }
 });
 picturesContainer.addEventListener('click', (evt) => {
